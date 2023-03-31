@@ -55,9 +55,9 @@ Branch: animal-sightings-reports
 
 Acceptance Criteria
 
-Can see one animal with all its associated sightings
+✅ Can see one animal with all its associated sightings
 Hint: Checkout this example on how to include associated records
-Can see all the all sightings during a given time period
+✅ Can see all the all sightings during a given time period
 Hint: Your controller can use a range to look like this:
 
 Stretch Challenges

@@ -13,7 +13,7 @@ class AnimalsController < ApplicationController
         animal = Animal.create(animal_params)
         if animal.valid?
             render json: animal
-        else render json: { errors: animal.errors.full_messages }, status: :unprocessable_entity
+        else render json: animal.errors, status: :unprocessable_entity
         end
     end
 

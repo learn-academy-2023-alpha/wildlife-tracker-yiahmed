@@ -1,4 +1,9 @@
 class SightingsController < ApplicationController
+    def index
+        sightings = Sighting.all
+        render json: animals
+    end
+  
     def create
         sighting = Sighting.create(sighting_params)
         if sighting.valid?
@@ -20,6 +25,11 @@ class SightingsController < ApplicationController
     def destroy
       sighting = Sighting.find(params[:id])
       sighting.destroy
+      if sighting.destroy 
+        render json: sighting
+      else 
+        render json: sighting.errors
+      end
     end
   
     private
